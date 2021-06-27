@@ -104,6 +104,7 @@ def load_img(path, grayscale=False, color_mode='rgb', target_size=None,
         ValueError: if interpolation method is not supported.
         TypeError: type of 'path' should be path-like or io.Byteio.
     """
+    print("hi")
     if grayscale is True:
         warnings.warn('grayscale is deprecated. Please use '
                       'color_mode = "grayscale"')
