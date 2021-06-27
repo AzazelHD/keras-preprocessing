@@ -5,7 +5,7 @@ import threading
 
 import numpy as np
 
-from keras_preprocessing import get_keras_submodule
+from keras_custom_preprocessing import get_keras_submodule
 
 try:
     IteratorType = get_keras_submodule('utils').Sequence
