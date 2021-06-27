@@ -122,19 +122,19 @@ def load_img(path, grayscale=False, color_mode='rgb', target_size=None,
         raise TypeError('path should be path-like or io.BytesIO'
                         ', not {}'.format(type(path)))
 
-    if color_mode == 'grayscale':
-        # if image is not already an 8-bit, 16-bit or 32-bit grayscale image
-        # convert it to an 8-bit grayscale image.
-        if img.mode not in ('L', 'I;16', 'I'):
-            img = img.convert('L')
-    elif color_mode == 'rgba':
-        if img.mode != 'RGBA':
-            img = img.convert('RGBA')
-    elif color_mode == 'rgb':
-        if img.mode != 'RGB':
-            img = img.convert('RGB')
-    else:
-        raise ValueError('color_mode must be "grayscale", "rgb", or "rgba"')
+#     if color_mode == 'grayscale':
+#         # if image is not already an 8-bit, 16-bit or 32-bit grayscale image
+#         # convert it to an 8-bit grayscale image.
+#         if img.mode not in ('L', 'I;16', 'I'):
+#             img = img.convert('L')
+#     elif color_mode == 'rgba':
+#         if img.mode != 'RGBA':
+#             img = img.convert('RGBA')
+#     elif color_mode == 'rgb':
+#         if img.mode != 'RGB':
+#             img = img.convert('RGB')
+#     else:
+#         raise ValueError('color_mode must be "grayscale", "rgb", or "rgba"')
     if target_size is not None:
         width_height_tuple = (target_size[1], target_size[0])
         if img.size != width_height_tuple:
