@@ -21,15 +21,11 @@ def get_keras_submodule(name):
             'Requested: %s' % name)
     if _KERAS_BACKEND is None:
         raise ImportError('You need to first `import keras` '
-                          'in order to use `keras_preprocessing`. '
+                          'in order to use `keras_custom_preprocessing`. '
                           'For instance, you can do:\n\n'
                           '```\n'
                           'import keras\n'
-                          'from keras_preprocessing import image\n'
-                          '```\n\n'
-                          'Or, preferably, this equivalent formulation:\n\n'
-                          '```\n'
-                          'from keras import preprocessing\n'
+                          'from keras_custom_preprocessing import image\n'
                           '```\n')
     if name == 'backend':
         return _KERAS_BACKEND
